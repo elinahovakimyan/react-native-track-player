@@ -139,6 +139,10 @@ function updateNowPlayingMetadata(metadata: NowPlayingMetadata): Promise<void> {
   return TrackPlayer.updateNowPlayingMetadata(metadata)
 }
 
+async function isServiceRunning(): Promise<void> {
+  return TrackPlayer.isServiceRunning()
+}
+
 // MARK: - Player API
 
 async function reset(): Promise<void> {
@@ -219,6 +223,7 @@ export default {
   // MARK: - General API
   setupPlayer,
   destroy,
+  isServiceRunning,
   registerPlaybackService,
   addEventListener,
 
